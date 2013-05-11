@@ -1,26 +1,23 @@
+#!/usr/bin/python
 import random
 import sys
 
-firstrun = False
+firstrun = True 
+
 no_list = ['no', 'n', 'exit']
 yes_list = ['yes', 'y', 'of course']
 
 def is_no(string):
-  if string.lower() in no_list:
-    return True
-  
-  return False
+  return string.lower() in no_list
 
 def is_yes(string):
-  if string.lower() in yes_list:
-    return True
-
-  return False
+  return string.lower() in yes_list
 
 
 while True:
   if firstrun:
     msg = 'Would you like to play a game?\t'
+    firstrun = False
   else:
     msg = 'Would you like to play again?\t'
    
